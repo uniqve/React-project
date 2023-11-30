@@ -1,0 +1,15 @@
+.btn-add{
+    width: 100%;
+    height: 40px;
+    padding: 8px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 0;
+    border-radius: 8px;
+    border: 1px solid var(--cskc-06-ecc-400, #BD68CA);
+    background: var(--cskc-06-ecc-500, #C06ECC);
+    color: white;
+    font-family: Inter;
+    margin-bottom: 24px;
+}
