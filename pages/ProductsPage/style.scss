@@ -1,0 +1,14 @@
+.content{
+    position: relative;
+}
+.container {
+    height: 800px; 
+    overflow-y: scroll;
+  }
+  .container::-webkit-scrollbar {
+    width: 0;
+  }
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+  

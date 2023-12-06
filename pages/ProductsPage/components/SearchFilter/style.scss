@@ -1,0 +1,26 @@
+.page-search{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin: 24px 0;
+
+p{
+    margin-right: 8px;
+}
+.page-btn{
+    padding: 8px;
+    margin-right: 16px;
+    background-color: white;
+}
+.btn-prev, .btn-next{
+    display: flex;
+    height: 32px;
+    padding: 4px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 0px 4px 4px 0px;
+    border: 1px solid var(--grayspace-layout-gray-30, #D0D3DA);
+    background: var(--grayspace-layout-gray-5, #F8F8FA);
+}
+}
