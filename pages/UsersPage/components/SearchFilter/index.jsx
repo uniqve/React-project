@@ -1,20 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import "./style.scss";
-import productsData from "../productsData";
+import clientsData from "../../clientsData";
 
-function SerchFilter({ setTotalPages, setCurrentPage, currentPage, totalPages, setNumbersOfPage, numberOfPage }) {
+
+function SerchFilter({setNumbersOfPage, setTotalPages, setCurrentPage, currentPage, totalPages, numberOfPage}) {
   
   function changeNumberPage(e) {
     const num = +e.target.value;
     
     setNumbersOfPage(num);
-    setTotalPages(Math.ceil(productsData.length / num));
+    setTotalPages(Math.ceil(clientsData.length / num));
     setCurrentPage(1);
   }
 
   return (
-    <>
-      <p>Показывать</p>
+      <>
+          <div className="page-search">
+          <p>Показывать</p>
       <select
         name="number"
         id="select-all"
@@ -24,12 +26,13 @@ function SerchFilter({ setTotalPages, setCurrentPage, currentPage, totalPages, s
         <option value="10">10</option>
         <option value="20">20</option>
         <option value="30">30</option>
-      </select>
-      <div className="page-block">
+              </select>
+              <div className="page-block">
                 <p>Страница</p>
                 <p>{currentPage}</p>
                 <p>из {totalPages}</p>
-        </div>
+              </div>
+      
       <button
         className="btn-prev"
         disabled={currentPage === 1}
@@ -44,6 +47,8 @@ function SerchFilter({ setTotalPages, setCurrentPage, currentPage, totalPages, s
       >
        <img className="img-right" src="../../images/en-arrow-right.svg" alt="btn-right" />
       </button>
+          </div>
+      
     </>
   );
 }

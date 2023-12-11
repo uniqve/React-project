@@ -26,14 +26,15 @@ function ProductsPage() {
         category: 'Эстетический уход',
         subcategory: 'Очищение',
         cashback: '5%',
-        brand: 'Kosmoteros Personnel Paris'
+        brand: 'Kosmoteros Personnel Paris',
+        checked: false,
     });
     
    
     
   
       const handleSaveButtonClick = (id) => {
-        const newId = tableData.length + 1;
+        const newId = Date.now(); 
           const newAction = {
             id: newId,
             categoryName: newElement.category,
@@ -51,7 +52,7 @@ function ProductsPage() {
        
           setModalActive(false);
           setTotalPages(Math.ceil(tableData.length + 1 / numbersOfPage))
-          
+       
           
         };
             
@@ -108,7 +109,7 @@ function ProductsPage() {
             if (item.id === itemId) {
               return {
                 ...item,
-                checked: !item.checked, 
+                checked: !item.checked
               };
             }
             return item;
@@ -131,7 +132,7 @@ function ProductsPage() {
       useEffect(() => {
         const total = Math.ceil(tableData.length / numbersOfPage);
         setTotalPages(total);
-      }, [numbersOfPage, totalPages]);
+      }, [numbersOfPage, tableData.length, totalPages]);
 
     
     
