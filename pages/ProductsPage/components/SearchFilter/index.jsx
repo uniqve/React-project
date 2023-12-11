@@ -6,7 +6,7 @@ function SerchFilter({ setTotalPages, setCurrentPage, currentPage, totalPages, s
   
   function changeNumberPage(e) {
     const num = +e.target.value;
-   
+    
     setNumbersOfPage(num);
     setTotalPages(Math.ceil(productsData.length / num));
     setCurrentPage(1);
@@ -33,14 +33,14 @@ function SerchFilter({ setTotalPages, setCurrentPage, currentPage, totalPages, s
         disabled={currentPage === 1}
         onClick={() => setCurrentPage(currentPage - 1)}
       >
-        Prev
+        <img className="img-left" src="../../images/en-arrow-right-1.svg" alt="btn-left" />
       </button>
       <button
         className="btn-next"
         disabled={currentPage === totalPages}
         onClick={() => setCurrentPage(currentPage + 1)}
       >
-        Next
+       <img className="img-right" src="../../images/en-arrow-right.svg" alt="btn-right" />
       </button>
     </>
   );

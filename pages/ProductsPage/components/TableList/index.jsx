@@ -1,59 +1,11 @@
-import React,{ useState, useEffect } from "react";
-import productsData from "../productsData";
+import React,{} from "react";
 import "./style.scss";
-// import ModalForDelete from "../ModalForDelete/index";
 
 
-function TableList({numbersOfPage, currentPage}) {
 
-  const [tableData, setTableData] = useState(productsData)
+function TableList({ handleMainCheckboxChange, handleChange, selectedItems, selectAll, filteredTableData}) {
 
-  const [selectAll, setSelectAll] = useState(false);
-  const [selectedItems, setSelectedItems] = useState([]);
-  const [filteredTableData, setFilteredTableData] = useState([]);
-  
-    useEffect(() => {
-      console.log(numbersOfPage);
-      const startIndex = (currentPage - 1) * numbersOfPage;
-      const endIndex = startIndex + numbersOfPage;
 
-    setFilteredTableData(tableData.slice(startIndex, endIndex));
-  }, [tableData, numbersOfPage, currentPage]);
-
-  const handleMainCheckboxChange = (event) => {
-    const checked = event.target.checked;
-    setSelectAll(checked);
-    setTableData((prevTableData) =>
-      prevTableData.map((item) => ({
-        ...item,
-        checked: checked,
-      }))
-    );
-        
-    setSelectedItems(checked ? tableData.map((item) => item.id) : []);
-  };
-
-  const handleChange = (itemId) => {
-    setTableData((prevTableData) => {
-      return prevTableData.map((item) => {
-        if (item.id === itemId) {
-          return {
-            ...item,
-            checked: !item.checked, 
-          };
-        }
-        return item;
-      });
-    });
-  
-    setSelectedItems((prevSelectedItems) => {
-      if (prevSelectedItems.includes(itemId)) {
-        return prevSelectedItems.filter((id) => id !== itemId);
-      } else {
-        return [...prevSelectedItems, itemId]; 
-      }
-    });
-  };
 
   return (
     <table className="table">

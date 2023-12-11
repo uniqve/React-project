@@ -4,7 +4,7 @@ import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Sidebar from '../components/sidebar';
 import MainPage from '../components/mainPage/index';
-import InputBlock from '../components/InputBlock/index'
+
 
     
 const App = () => {

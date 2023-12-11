@@ -1,20 +1,29 @@
 import React from "react"
+import "./style.scss"
 
-function ModalForDelete() {
+function ModalForDelete({ data, handleClickDeleteButton, handleClickCloseButton, modalOnPage,hide, setHide }) {
     
+
+    const counter = data.filter(item => item.checked).length;
+    const classChange = counter > 0 ? "active" : "hidden";
+   
+
     return (
         <>
-        <div className="selected-items">{`Количество выбранных позиций: `}
+            <div className={`selected-items ${classChange} ${hide}`}
+            >{`Количество выбранных позиций: ${counter}`}
       <div className="delete-items">
                         <img
                             src="../../images/Корзина.svg"
-                            alt="basket" 
-                            />
-        <p >Удалить</p>
+                        alt="basket" 
+                        onClick={handleClickDeleteButton}
+                    />
+        <p onClick={handleClickDeleteButton}>Удалить</p>
         <img
           className="close-items"
           src="../../images/Закрыть.svg"
-          alt="exit"
+                        alt="exit"
+                        onClick={handleClickCloseButton}
          />
             </div>
             </div>

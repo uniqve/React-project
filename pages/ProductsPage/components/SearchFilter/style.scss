@@ -15,12 +15,16 @@ p{
 .btn-prev, .btn-next{
     display: flex;
     height: 32px;
-    padding: 4px 8px;
+    padding: 8px 8px;
     justify-content: center;
     align-items: center;
     gap: 8px;
     border-radius: 0px 4px 4px 0px;
     border: 1px solid var(--grayspace-layout-gray-30, #D0D3DA);
     background: var(--grayspace-layout-gray-5, #F8F8FA);
+}
+.img-left, .img-right{
+    width: 16px;
+    height: 16px;
 }
 }
