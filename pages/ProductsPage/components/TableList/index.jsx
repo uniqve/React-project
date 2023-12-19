@@ -1,20 +1,21 @@
-import React,{} from "react";
-import "./style.scss";
+import React from "react";
+import styles from "./styles.module.scss";
 
-
-
-function TableList({ handleMainCheckboxChange, handleChange, selectedItems, selectAll, filteredTableData}) {
-
-
-
+function TableList({
+  handleMainCheckboxChange,
+  handleChange,
+  selectedItems,
+  selectAll,
+  filteredTableData,
+}) {
   return (
-    <table className="table">
+    <table className={styles.table}>
       <thead>
-        <tr className="table__categories">
+        <tr className={styles.table__categories}>
           <td>
             <input
-              className="main-checkboks"
-              type="checkbox"
+              className={styles.main_checkboks}
+              type='checkbox'
               checked={selectAll}
               onChange={handleMainCheckboxChange}
             />
@@ -26,13 +27,13 @@ function TableList({ handleMainCheckboxChange, handleChange, selectedItems, sele
           <th>Кэшбэк</th>
         </tr>
       </thead>
-      <tbody>
-              {filteredTableData.map((item) => (
+      <tbody>s
+        {filteredTableData.map((item) => (
           <tr key={item.id}>
             <td>
               <input
-                className="checkbox"
-                type="checkbox"
+                className={styles.checkbox}
+                type='checkbox'
                 checked={selectedItems.includes(item.id)}
                 onChange={() => handleChange(item.id)}
               />

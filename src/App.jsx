@@ -1,25 +1,22 @@
+import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import Sidebar from "../components/Sidebar/index";
+import MainPage from "../components/MainPage/index";
+import styles from "./index.module.scss";
 
-import '../styles/App.scss';
-import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import Sidebar from '../components/sidebar';
-import MainPage from '../components/mainPage/index';
-
-
-    
 const App = () => {
-    return (
-      <Router>
-            <div className="app">
-                <div className='wrapper'>
-                <Sidebar />
-                    <div className='content'>
-                        <MainPage />
-                    </div>
-                </div>
-            </div>
-      </Router>
-    );
-  };
-  
-  export default App;
+  return (
+    <Router>
+      <div className={styles.app}>
+        <div className={styles.wrapper}>
+          <Sidebar />
+          <div className={styles.content}>
+            <MainPage />
+          </div>
+        </div>
+      </div>
+    </Router>
+  );
+};
+
+export default App;

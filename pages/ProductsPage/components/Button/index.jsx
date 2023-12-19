@@ -1,12 +1,12 @@
 import React from "react";
-import "./style.scss"
+import styles from "./styles.module.scss";
 
-function Button({onClick}) {
-    return(
-        <>
-            <button className="btn-add" onClick={onClick}>Добавить акцию</button>
-        </>
-    )
+function Button({ onClick }) {
+  return (
+    <button className={styles.btn_add} onClick={onClick}>
+      Добавить акцию
+    </button>
+  );
 }
 
 export default Button;

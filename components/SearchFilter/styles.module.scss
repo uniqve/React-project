@@ -1,0 +1,39 @@
+.pageSearch {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin: 24px 0;
+}
+p {
+  margin-right: 8px;
+}
+p:last-child {
+  margin: 0;
+}
+.page-btn {
+  padding: 8px;
+  margin-right: 16px;
+  background-color: white;
+}
+.btn_prev,
+.btn_next {
+  display: flex;
+  height: 32px;
+  padding: 8px 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 0px 4px 4px 0px;
+  border: 1px solid var(--grayspace-layout-gray-30, #d0d3da);
+  background: var(--grayspace-layout-gray-5, #f8f8fa);
+}
+.img_left,
+.img_right {
+  width: 16px;
+  height: 16px;
+}
+.page_block {
+  display: flex;
+  width: 173px;
+  align-items: center;
+}

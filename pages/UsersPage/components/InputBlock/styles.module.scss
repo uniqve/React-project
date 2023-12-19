@@ -1,0 +1,39 @@
+.input_block {
+  margin: 0;
+  padding: 1rem 1rem 1rem 1.7rem;
+  width: 320px;
+  height: 40px;
+}
+.input_filter {
+  display: flex;
+  justify-content: end;
+  position: relative;
+}
+.searchIcon {
+  position: absolute;
+  right: 295px;
+  top: 30%;
+}
+.cancelIcon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.input_block::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: #000;
+}
+
+.closeModal::before {
+  transform: rotate(45deg);
+}
+
+.closeModal::after {
+  transform: rotate(-45deg);
+}
