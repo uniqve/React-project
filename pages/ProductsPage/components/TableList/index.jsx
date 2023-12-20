@@ -27,7 +27,7 @@ function TableList({
           <th>Кэшбэк</th>
         </tr>
       </thead>
-      <tbody>s
+      <tbody>
         {filteredTableData.map((item) => (
           <tr key={item.id}>
             <td>
